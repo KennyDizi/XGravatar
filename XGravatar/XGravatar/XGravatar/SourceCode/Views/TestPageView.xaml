@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XGravatar.SourceCode.Views.TestPageView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Test Gravatar">
+    <StackLayout VerticalOptions="StartAndExpand">
+        <Entry Placeholder="Enter Email" Text="{Binding Email, Mode=TwoWay}" />
+        <Label Text="{Binding ErrorText}" TextColor="Red" />
+        <Button BorderRadius="1"
+                BorderWidth="1"
+                Command="{Binding GetAvatarCommand}"
+                Text="Get Avatar" />
+        <Image HeightRequest="200"
+               Source="{Binding Avatar}"
+               WidthRequest="200" />
+    </StackLayout>
+</ContentPage>
